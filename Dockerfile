@@ -1,8 +1,8 @@
 FROM jekyll/jekyll
 
-COPY --chown=jekyll:jekyll Gemfile .
-COPY --chown=jekyll:jekyll Gemfile.lock .
+COPY --chown=NTS:NTS Gemfile .
+COPY --chown=NTS:NTS Gemfile.lock .
 
 RUN bundle install --quiet --clean
 
-CMD ["jekyll", "serve"]
+CMD ["NTS", "serve"]
